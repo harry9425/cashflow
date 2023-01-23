@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#808080"
+    android:gravity="center"
+    android:textAlignment="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0.4dp"
+        android:background="#191919"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="cursive"
+            android:gravity="left|center_vertical"
+            android:text="Cashflow"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#222222"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title4">
+
+            <LinearLayout
+                android:id="@+id/updateentrylinear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/dialogname"
+                app:layout_constraintStart_toStartOf="@+id/typeswitch"
+                app:layout_constraintTop_toBottomOf="@+id/typeswitch">
+
+                <Switch
+                    android:id="@+id/cashinout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:text="Credit/Withdraw"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/textView3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/dialogupdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:text="Update"
+                        android:textColor="#FFFFFF"
+                        app:backgroundTint="#E91E63" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/newentrylinear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/dialogname"
+                app:layout_constraintStart_toStartOf="@+id/typeswitch"
+                app:layout_constraintTop_toBottomOf="@+id/typeswitch">
+
+                <Button
+                    android:id="@+id/dialogsaveandnew"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonbg"
+                    android:text="Add more"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:backgroundTint="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/dialogsave"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonbgg"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#4CAF50" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#00000000"
+                android:contentDescription="TODO"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.022"
+                app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#00000000"
+                android:contentDescription="TODO"
+                app:layout_constraintBottom_toBottomOf="@+id/dialogcalender"
+                app:layout_constraintEnd_toStartOf="@+id/dialogtime"
+                app:layout_constraintTop_toTopOf="@+id/dialogcalender"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_baseline_access_time_24" />
+
+            <TextView
+                android:id="@+id/dialogcalender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="1/8/2022"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+            <TextView
+                android:id="@+id/dialogtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:text="1/8/2022"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageButton2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/dialogamount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:hint="Enter Amount in  rupees"
+                android:inputType="numberSigned|number|textPersonName|numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#5E5E5E"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/dialogtime"
+                app:layout_constraintStart_toStartOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+            <EditText
+                android:id="@+id/dialogname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:hint="Enter Description of entry"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#5E5E5E"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/dialogamount"
+                app:layout_constraintStart_toStartOf="@+id/dialogamount"
+                app:layout_constraintTop_toBottomOf="@+id/dialogamount" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="10dp"
+                android:text="Payments Mode"
+                android:textColor="#BFBFBF"
+                app:layout_constraintStart_toStartOf="@+id/dialogname"
+                app:layout_constraintTop_toBottomOf="@+id/dialogname" />
+
+            <Switch
+                android:id="@+id/typeswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:checked="true"
+                android:text="Cash/Online  "
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#00000000"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/typeswitch"
+                app:layout_constraintStart_toEndOf="@+id/typeswitch"
+                app:layout_constraintTop_toTopOf="@+id/typeswitch"
+                app:srcCompat="@drawable/ic_baseline_expand_more_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

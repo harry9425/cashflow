@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".loginpage">
+
+    <TextView
+        android:id="@+id/title5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:fontFamily="cursive"
+        android:gravity="left|center_vertical"
+        android:text="Cashflow"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        android:textSize="46sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/logincontinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:backgroundTint="#4CAF50"
+        app:layout_constraintEnd_toEndOf="@+id/loginpass"
+        app:layout_constraintTop_toBottomOf="@+id/loginpass" />
+
+    <EditText
+        android:id="@+id/loginemail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:hint="Enter your email address here"
+        android:inputType="textWebEmailAddress|textEmailSubject"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#5E5E5E"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/loginpass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:hint="Enter your password here"
+        android:inputType="numberPassword|textWebPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#5E5E5E"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/loginemail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/loginemail"
+        app:layout_constraintTop_toBottomOf="@+id/loginemail" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Please Login to continue:"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/title5"
+        app:layout_constraintTop_toBottomOf="@+id/title5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
